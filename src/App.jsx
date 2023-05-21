@@ -1,11 +1,16 @@
 
+import { ContainerStyle,Section } from './components/Container/index';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
-    <div className="app">
+    <ContainerStyle>
+      <Section>
+        <Navbar/>
       Hello React Again
-    </div>
+      </Section>
+    </ContainerStyle>
   )
 }
 
