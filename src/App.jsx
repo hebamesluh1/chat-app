@@ -1,15 +1,19 @@
 
-import { ContainerStyle,Section } from './components/Container/index';
+import Chat from './components/Chat';
+import { ContainerStyle, Section } from './components/Container/index';
 import Navbar from './components/Navbar';
 
+import { auth } from './Firebase/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import SignIn from './Pages/SignIn';
+
 function App() {
+  const [user] = useAuthState(auth);
+  console.log(user);
 
   return (
     <ContainerStyle>
-      <Section>
-        <Navbar/>
-      Hello React Again
-      </Section>
+      {user ? <Chat /> : <SignIn />}
     </ContainerStyle>
   )
 }
