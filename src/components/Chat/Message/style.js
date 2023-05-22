@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Wrapper=styled.div`
-display:flex;
-flex-direction: ${props=>props.direction =='send'?'row-reverse':'row'};
-`
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: ${(props) =>
+    props.direction == "send" ? "row-reverse" : "row"};
+`;
 export const Text = styled.div`
-  background:${props=>props.direction =='send'?'#c596fe':'#191b1d'};
+  background: ${(props) => (props.direction == "send" ? "#c596fe" : "#191b1d")};
   color: #fff;
   width: 150px;
   height: 35px;
@@ -24,7 +25,7 @@ export const Text = styled.div`
 export const Name = styled.p`
   position: absolute;
   margin-top: -1.5rem;
-  font-size:10px;
-  color:${props=>props.direction =='send'?'#c596fe':'#191b1d'};
-  ${props=>props.direction =='send'?'right:10px':'left:10px'};
+  font-size: 10px;
+  color: ${(props) => (props.direction == "send" ? "#c596fe" : "#191b1d")};
+  ${(props) => (props.direction == "send" ? "right:10px" : "left:10px")};
 `;

@@ -3,14 +3,15 @@ import { Form } from './style'
 import { auth, db } from '../../../Firebase/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
-const SendMessage = ({scroll}) => {
+// eslint-disable-next-line react/prop-types
+const SendMessage = ({ scroll }) => {
     const [input, setInput] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if(input == ''){
+        if (input == '') {
             alert("Invalid Input Message");
-            return 
+            return
         }
         const { uid, displayName } = auth.currentUser;
         await addDoc(collection(db, 'messages'), {
@@ -20,7 +21,8 @@ const SendMessage = ({scroll}) => {
             timestamp: serverTimestamp()
         })
         setInput('');
-        scroll.current.scrollIntoView({behavior:'smooth'})
+        // eslint-disable-next-line react/prop-types
+        scroll.current.scrollIntoView({ behavior: 'smooth' })
     }
     return (
         <Form onSubmit={handleSubmit}>

@@ -1,7 +1,6 @@
 
 import Chat from './components/Chat';
-import { ContainerStyle, Section } from './components/Container/index';
-import Navbar from './components/Navbar';
+import { ContainerStyle } from './components/Container/index';
 
 import { auth } from './Firebase/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
