@@ -26,5 +26,5 @@ export const Name = styled.p`
   margin-top: -1.5rem;
   font-size:10px;
   color:${props=>props.direction =='send'?'#c596fe':'#191b1d'};
-  ${props=>props.direction =='send'?'right:2':'left:2'};
+  ${props=>props.direction =='send'?'right:10px':'left:10px'};
 `;
