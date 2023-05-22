@@ -1,8 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
+
 import { ChatStyle } from './style';
-import Message from './Message';
+
+//firebase
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { db } from '../../Firebase/firebase';
+
+//components
+import Message from './Message';
 import SendMessage from './SendMessage';
 import { Section } from '../Container';
 import Navbar from '../Navbar';

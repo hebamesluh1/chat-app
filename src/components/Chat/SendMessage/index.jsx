@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Form } from './style'
+
+//firebase
 import { auth, db } from '../../../Firebase/firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 

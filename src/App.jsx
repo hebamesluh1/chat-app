@@ -1,10 +1,11 @@
 
-import Chat from './components/Chat';
 import { ContainerStyle } from './components/Container/index';
 
 import { auth } from './Firebase/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
+
 import SignIn from './Pages/SignIn';
+import Chats from './Pages/Chats';
 
 function App() {
   const [user] = useAuthState(auth);
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <ContainerStyle>
-      {user ? <Chat /> : <SignIn />}
+      {user ? <Chats /> : <SignIn />}
     </ContainerStyle>
   )
 }

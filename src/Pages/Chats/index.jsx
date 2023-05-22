@@ -1,7 +1,8 @@
+import Chat from './../../components/Chat/index';
 
 const Chats = () => {
   return (
-    <div>Chats</div>
+    <><Chat/></>
   )
 }
 
